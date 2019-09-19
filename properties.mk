@@ -168,7 +168,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     DEVICE_PROVISIONED=1 \
     persist.sys.fflag.override.settings_network_and_internet_v2=true \
     ril.subscription.types=NV,RUIM \
-    telephony.lteOnCdmaDevice=1
+    rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so \
+    ro.telephony.default_network=22,20 \
+    ro.vendor.use_data_netmgrd=true \
+    telephony.lteOnCdmaDevice=1 \
+		ro.telephony.iwlan_operation_mode=legacy
 
 # Sensor
 PRODUCT_PROPERTY_OVERRIDES += \
